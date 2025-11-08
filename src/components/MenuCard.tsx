@@ -13,9 +13,10 @@ interface MenuCardProps {
   category: string;
   is_veg: boolean;
   preparation_time: number;
+  image_url?: string | null;
 }
 
-export function MenuCard({ id, name, description, price, category, is_veg, preparation_time }: MenuCardProps) {
+export function MenuCard({ id, name, description, price, category, is_veg, preparation_time, image_url }: MenuCardProps) {
   const { addItem } = useCart();
 
   const handleAddToCart = () => {
@@ -25,6 +26,15 @@ export function MenuCard({ id, name, description, price, category, is_veg, prepa
 
   return (
     <Card className="overflow-hidden transition-all hover:shadow-[var(--shadow-card)] hover:-translate-y-1">
+      {image_url && (
+        <div className="aspect-video w-full overflow-hidden bg-muted">
+          <img 
+            src={image_url} 
+            alt={name}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
       <CardHeader className="pb-3">
         <div className="flex items-start justify-between gap-2">
           <div className="flex-1">

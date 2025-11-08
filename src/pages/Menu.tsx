@@ -5,6 +5,7 @@ import { MenuCard } from "@/components/MenuCard";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Loader2 } from "lucide-react";
+import { getImageForDish } from "@/lib/dishImages";
 
 interface MenuItem {
   id: string;
@@ -14,6 +15,7 @@ interface MenuItem {
   category: string;
   is_veg: boolean;
   preparation_time: number;
+  image_url?: string | null;
 }
 
 export default function Menu() {
@@ -35,7 +37,11 @@ export default function Menu() {
       .order("category");
     
     if (!error && data) {
-      setItems(data);
+      const itemsWithImages = data.map(item => ({
+        ...item,
+        image_url: item.image_url || getImageForDish(item.name)
+      }));
+      setItems(itemsWithImages);
     }
     setLoading(false);
   };
