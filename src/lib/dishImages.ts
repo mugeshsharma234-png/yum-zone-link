@@ -30,6 +30,18 @@ import alooParatha from "@/assets/dishes/aloo-paratha.jpg";
 import rajmaRice from "@/assets/dishes/rajma-rice.jpg";
 import vegBurger from "@/assets/dishes/veg-burger.jpg";
 import chickenBurger from "@/assets/dishes/chicken-burger.jpg";
+import chickenChettinad from "@/assets/dishes/chicken-chettinad.jpg";
+import muttonBiryani from "@/assets/dishes/mutton-biryani.jpg";
+import fishFry from "@/assets/dishes/fish-fry.jpg";
+import chicken65 from "@/assets/dishes/chicken-65.jpg";
+import prawnMasala from "@/assets/dishes/prawn-masala.jpg";
+import muttonKolaUrundai from "@/assets/dishes/mutton-kola-urundai.jpg";
+import fishCurryTamil from "@/assets/dishes/fish-curry-tamil.jpg";
+import muttonChukka from "@/assets/dishes/mutton-chukka.jpg";
+import prawnFry from "@/assets/dishes/prawn-fry.jpg";
+import chickenVaruval from "@/assets/dishes/chicken-varuval.jpg";
+import muttonPepperFry from "@/assets/dishes/mutton-pepper-fry.jpg";
+import crabMasala from "@/assets/dishes/crab-masala.jpg";
 
 export const dishImages: Record<string, string> = {
   "Masala Dosa": masalaDosa,
@@ -64,6 +76,18 @@ export const dishImages: Record<string, string> = {
   "Rajma Rice": rajmaRice,
   "Veg Burger": vegBurger,
   "Chicken Burger": chickenBurger,
+  "Chicken Chettinad": chickenChettinad,
+  "Mutton Biryani": muttonBiryani,
+  "Fish Fry (Meen Varuval)": fishFry,
+  "Chicken 65": chicken65,
+  "Prawn Masala": prawnMasala,
+  "Mutton Kola Urundai": muttonKolaUrundai,
+  "Fish Curry (Meen Kuzhambu)": fishCurryTamil,
+  "Mutton Chukka": muttonChukka,
+  "Prawn Fry": prawnFry,
+  "Chicken Varuval": chickenVaruval,
+  "Mutton Pepper Fry": muttonPepperFry,
+  "Crab Masala": crabMasala,
 };
 
 export const getImageForDish = (dishName: string): string | undefined => {
